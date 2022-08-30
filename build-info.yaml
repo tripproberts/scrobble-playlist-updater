@@ -1,0 +1,16 @@
+version: 2
+
+template:
+  type: webLibrary
+  webLibrary:
+    publishStrategy: 'semantic-release'
+    # Valid options for publishStrategy are:
+    # 'semantic-release' : Uses our internal semantic-release-plugin-tingle to handle releases
+    #                      automatically based on commit messages
+    # 'package-version'  : If you want to tell Tingle to publish by manually updating the
+    #                      version in package.json
+    # null / removed     : If you never want to publish a version through Tingle.
+    staticSite:
+      enabled: false 
+      reviewDeployments:
+        enabled: false
