@@ -1,15 +1,21 @@
 require 'lastfm'
 
+require_relative 'scrobble'
+
 class ScrobbleService
-  API_KEY = '7f60c8b3761c4cb962ad5fbf8dc6ef90'
+  API_KEY = ENV['LAST_FM_API_KEY']
   SECRET = 'not-needed'
 
   def initialize
     @session = get_session
   end
 
-  def get_tracks(user:, limit:, from:, to:)
-    @session.user.get_recent_tracks(user, limit, nil, to, from)
+  def get_scrobbles(user:, limit:, from:, to:)
+    tracks = @session.user.get_recent_tracks(user, limit, nil, to, from)
+    tracks = [tracks] if tracks.is_a? Hash
+    tracks.nil? ? [] : tracks.map { |r|
+      Scrobble.build_from_service(r)
+    }.compact
   end
 
   private
