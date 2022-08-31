@@ -1,6 +1,0 @@
-site_name: Top Scrobbles
-site_description: >
-  Technical documentation for top-scrobbles, a web library.
-
-nav:
-  - Top Scrobbles Home: index.md
