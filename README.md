@@ -1,6 +1,7 @@
-# top-scrobbles
+# update-scrobble-playlist
 
 ## Description
 
-Calculates my personal top scrobbles for the last 7 days from Last.fm and updates a playlist in
-Spotify. Intended to be run as a Google Cloud Function.
+Calculates my top scrobbles for the last 7 days using Last.fm and updates
+a [Spotify playlist](https://open.spotify.com/playlist/6K5607lu5oKcfV5hVRhjtQ?si=82a12c4b96104e5c).
+Intended to be run as a Google Cloud Function.
