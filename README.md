@@ -1,4 +1,4 @@
-# update-scrobble-playlist
+# scrobble-playlist-updater
 
 ## Description
 

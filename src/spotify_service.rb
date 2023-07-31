@@ -5,8 +5,8 @@ class SpotifyService
   def initialize
     # Authorize spotify client
     @client = Google::Cloud::SecretManager.secret_manager_service
-    spotify_app_id = @client.access_secret_version(name: 'projects/74519756062/secrets/spotify-app-id/versions/1').payload.data
-    spotify_secret = @client.access_secret_version(name: 'projects/74519756062/secrets/spotify-app-secret/versions/1').payload.data
+    spotify_app_id = @client.access_secret_version(name: 'projects/452380183139/secrets/spotify-app-id/versions/1').payload.data
+    spotify_secret = @client.access_secret_version(name: 'projects/452380183139/secrets/spotify-app-secret/versions/1').payload.data
     RSpotify::authenticate(spotify_app_id, spotify_secret)
   end
 

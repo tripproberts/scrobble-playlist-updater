@@ -11,7 +11,7 @@ end
 def run
   user = 'tripproberts'
   playlist_id = '6K5607lu5oKcfV5hVRhjtQ'
-  user_hash_secret_name = 'projects/74519756062/secrets/rspotify-tripproberts-hash/versions/2'
+  user_hash_secret_name = 'projects/452380183139/secrets/rspotify-tripproberts-hash/versions/4'
 
   # Get last 7 days scrobbles
   scrobbles = []
